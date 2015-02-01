@@ -2,7 +2,7 @@
 
 Name:       libnl2
 Summary:    Library for netlink sockets
-Version:    2.0
+Version:    2.0.1
 Release:    2
 Group:      System/Network
 License:    GNU LESSER GENERAL PUBLIC LICENSE Version 2.1
