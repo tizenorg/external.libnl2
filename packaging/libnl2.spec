@@ -2,10 +2,10 @@
 
 Name:       libnl2
 Summary:    Library for netlink sockets
-Version:    2.0
+Version:    2.0.1
 Release:    2
 Group:      System/Network
-License:    GNU LESSER GENERAL PUBLIC LICENSE Version 2.1
+License:    LGPL-2.1+
 Source0:    %{name}-%{version}.tar.gz
 BuildRequires:  bison
 BuildRequires:  flex
@@ -45,11 +45,14 @@ make -j1
 rm -rf %{buildroot}
 %make_install
 
+mkdir -p %{buildroot}/usr/share/license
+cp %{_builddir}/%{buildsubdir}/COPYING %{buildroot}/usr/share/license/%{name}
 rm %{buildroot}/usr/etc/libnl/pktloc
 
 %files
 %defattr(-,root,root,-)
 %{_libdir}/libnl*.so.*
+/usr/share/license/%{name}
 
 %files devel
 %defattr(-,root,root,-)
